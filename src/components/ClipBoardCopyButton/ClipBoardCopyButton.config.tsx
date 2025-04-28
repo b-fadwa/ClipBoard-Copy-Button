@@ -1,6 +1,6 @@
 import { EComponentKind, T4DComponentConfig } from '@ws-ui/webform-editor';
 import { Settings } from '@ws-ui/webform-editor';
-import { FaRegCopy } from "react-icons/fa6";
+import { FaRegCopy } from 'react-icons/fa6';
 
 import ClipBoardCopyButtonSettings, { BasicSettings } from './ClipBoardCopyButton.settings';
 
@@ -57,11 +57,17 @@ export default {
     },
   },
   defaultProps: {
+    iterableChild: true,
+    label: 'Copy content to clipboard',
+    iconPosition: 'left',
     style: {
+      display: 'flex',
       width: 'fit-content',
-    }
+    },
   },
 } as T4DComponentConfig<IClipBoardCopyButtonProps>;
 
 export interface IClipBoardCopyButtonProps extends webforms.ComponentProps {
+  iconPosition: any;
+  label: any;
 }
